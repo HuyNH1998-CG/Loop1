@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number = 100;
+    let count = 0
+    let n = 1;
+    let a;
+    while (count < number) {
+        if (IsPrime(n) == 1) {
+            console.log(a);
+        }
+        count++;
+        n++;
+    }
+
+    function IsPrime(number) {
+        let prime = 0;
+        for (let n = 1; n <= number; n++) {
+            if (number % 3 === 0 && number % 5 === 0) {
+                a = "FizzBuzz"
+                prime = 1;
+            } else if (number % 5 === 0) {
+                a = "Buzz"
+                prime = 1;
+            } else if (number % 3 === 0) {
+                a = "Fizz"
+                prime = 1;
+            } else {
+                prime = 0
+            }
+        }
+        return prime
+    }
+</script>
+</body>
+</html>

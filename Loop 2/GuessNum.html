@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Guess It</title>
+    <style>
+        p {
+            size: 300px;
+            text-align: center;
+        }
+
+        button {
+            margin-left: 40%;
+            box-sizing: border-box;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+<button type="button" onclick="Start()">Start</button>
+<p id="end"></p>
+<script>
+    function Start() {
+        let max = +prompt("Input max");
+        let min = +prompt("Input min");
+        let b = Math.floor(Math.random() * (max - min) + min);
+        let c = +prompt("Guess It");
+        let limit = 3
+        if (c != b) {
+            for (let count = 1; count < limit; count++) {
+                c = +prompt("Go again")
+            }
+            document.getElementById("end").innerHTML = "Game Over! Press start to play again";
+        } else {
+            document.getElementById("end").innerHTML = "You Win! Press start to play again";
+        }
+
+    }
+</script>
+</body>
+</html>

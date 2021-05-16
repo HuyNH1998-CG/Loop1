@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sum to 20 fibo (21?)</title>
+</head>
+<body>
+<script>
+    let number = 20;
+    let n1 = 0, n2 = 1, next = n1 + n2
+    let sum = n1 + n2
+    console.log(sum)
+    for (let i = 1; i < number; i++) {
+        next = n1 + n2
+        n1 = n2
+        n2 = next
+        sum = sum + n2
+        console.log(sum)
+    }
+    alert(sum)
+</script>
+</body>
+</html>
