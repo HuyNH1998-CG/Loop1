@@ -20,6 +20,7 @@
 <body>
 <button type="button" onclick="Start()">Start</button>
 <p id="end"></p>
+<p id="end2"></p>
 <script>
     function Start() {
         let max = +prompt("Input max");
@@ -29,13 +30,17 @@
         let limit = 3
         if (c != b) {
             for (let count = 1; count < limit; count++) {
-                c = +prompt("Go again")
+                c = +prompt("Go again");
+                document.getElementById("end").innerHTML = "Game Over! Press start to play again";
             }
-            document.getElementById("end").innerHTML = "Game Over! Press start to play again";
+            if (c == b) {
+                document.getElementById("end").innerHTML = "You Win! Press start to play again";
+            }
+
         } else {
             document.getElementById("end").innerHTML = "You Win! Press start to play again";
         }
-
+        document.getElementById("end2").innerHTML = b
     }
 </script>
 </body>
