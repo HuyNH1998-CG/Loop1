@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bank</title>
+</head>
+<body>
+<script>
+    alert("Bạn sắp tính tiền vay lãi ngân hàng. Người viết chương trình không chịu trách nhiệm đói với các trường hợp sai số. Phép tính hiện tại chỉ tính theo hình thức tính lãi suất theo dư nợ gốc.");
+    let a = +prompt("Nhập số tiền vay");
+    let b = +prompt("Nhập kỳ hạn vay (tính theo tháng)");
+    let c = +prompt("Nhập lãi suất của ngân hàng");
+    let monthlyInterest = a / 100 * c / b;
+    let bankInterest = a / b + monthlyInterest;
+    let TotalBank = bankInterest;
+    for (let i = 1; i <= b; i++) {
+        TotalBank += bankInterest
+    }
+    alert(TotalBank + " la tong so tien phai tra ngan hang");
+</script>
+</body>
+</html>

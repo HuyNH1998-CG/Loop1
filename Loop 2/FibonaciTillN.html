@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fibo till set</title>
+</head>
+<body>
+<script>
+    let number = +prompt("Input limit num");
+    let n1 = 0, n2 = 1, next;
+    console.log(n1);
+    console.log(n2);
+    for (let i = 1; i <= number; i++) {
+        next = n1 + n2
+        console.log(next);
+        n1 = n2
+        n2 = next
+    }
+</script>
+</body>
+</html>

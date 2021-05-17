@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th colspan="2" id="up"></th>
+    </tr>
+    <tr>
+        <td id="left"></td>
+        <td style="text-align: right" id="right"></td>
+    </tr>
+    <tr>
+        <th colspan="2" id="down"></th>
+    </tr>
+</table>
+<script>
+    let h = "********************"
+    let t = "*"
+    let count = 1;
+    let limit = 5;
+    document.getElementById("up").innerHTML = h;
+    while (count <= limit){
+        document.getElementById("left").innerHTML += t +"<br>";
+        document.getElementById("right").innerHTML += t +"<br>";
+        count++;
+    }
+    document.getElementById("down").innerHTML = h;
+</script>
+</body>
+</html>
